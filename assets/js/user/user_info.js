@@ -43,9 +43,9 @@ $(function() {
                 if (res.code !== 0) {
                     return layui.layer.msg(res.message)
                 }
-                layui.layer.msg(res.message)
-                    //因为这边可能更新昵称 需要替换掉主页已有的登录名
-                    //所以还需要重新调用一下主页的获取用户信息 渲染头像
+                layui.layer.msg(res.message);
+                //因为这边可能更新昵称 需要替换掉主页已有的登录名
+                //所以还需要重新调用一下主页的获取用户信息 渲染头像
                 window.parent.getUserInfo();
             }
         })
