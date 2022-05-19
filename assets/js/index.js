@@ -5,20 +5,21 @@ $(function() {
     $('#btn_exit').on('click', function() {
         window.confirm('确认退出？', location.href = './login.html')
     });
+
+
 })
 
-//获取用户的基本信息
+//获取当前登录用户的基本信息
 function getUserInfo() {
     $.ajax({
         method: 'GET',
         url: '/my/userinfo',
         success(res) {
-            debugger
             if (res.code !== 0) {
                 return layui.layer.msg('获取用户信息失败')
             }
-            renderAvatar(res.data)
-            console.log(res.data)
+            renderAvatar(res.data);
+            // console.log(res.data)
         }
     })
 }
