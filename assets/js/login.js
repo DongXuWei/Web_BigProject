@@ -60,10 +60,11 @@ $(function() {
                 if (res.code !== 0) {
                     return layui.layer.msg(res.message)
                 }
+                console.log(res)
                 layui.layer.msg(res.message); //弹出
                 console.log(res.token);
                 localStorage.setItem('token', res.token);
-                location.href = './index.html'
+                location.href = '/index.html'
             }
         })
     })
