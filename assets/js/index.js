@@ -30,9 +30,11 @@ function renderAvatar(user) {
     let name = user.nickname || user.username;
     //设置文字
     $('#user_name').html(name);
+
     if (user.user_pic) {
         //说明用户有头像
-        $('.layui-nav-img').attr('src', user.user_pic);
+        $('.layui-nav-img').attr('src', user.user_pic).show();
+        $('.text-avatar').hide()
     } else {
         //说明用户没有头像
         //获取用户昵称的第一个字
