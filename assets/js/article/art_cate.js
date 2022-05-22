@@ -49,7 +49,7 @@ $(function() {
         })
         $('#sure').html('确认修改')
 
-        // 回显
+        // 发起请求回显数据
         $.ajax({
             method: 'GET',
             url: '/my/cate/info?id=' + id,
